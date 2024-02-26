@@ -27,3 +27,16 @@ export const ModalText = styled.Text`
 export const ModalButton = styled(Button)`
     width: 100%;
 `
+
+export const ModalTextMini = styled(ModalText)`
+    font-size: 14px;
+    color: #4E4B59;
+    margin-bottom: 20px;
+    text-align: left;
+`
+
+export const ModalTextBig = styled(ModalText)`
+    font-family: 'Quicksand_600SemiBold';
+    color: #33303E;
+    text-align: left;   
+`
