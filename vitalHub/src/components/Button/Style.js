@@ -56,3 +56,18 @@ export const WhiteSelectButton = styled(SelectButton)`
     background-color: #FBFBFB;
     border: 2px solid #607EC5;
 `
+
+export const SendPhotoButton = styled.TouchableOpacity`
+    width: 192px;
+    background-color: #49B3BA;
+    border: 1px solid #49B3BA;
+
+    height: 44px;
+    border-radius: 5px;
+    flex-direction: row;
+    
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+`
