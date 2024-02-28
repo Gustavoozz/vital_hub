@@ -26,7 +26,7 @@ export const ScheduleModal = ({
             <Title>Agendar consulta</Title>
 
 
-            <LabelUser>Informe o nível da consulta:</LabelUser>
+            <LabelUser style={{ marginRight: 30}}>Informe o nível da consulta:</LabelUser>
             <ChooseAppointment> 
 
            <BtnAppointmentType style={{ width: '200', borderColor: '#60BFC5' }}
@@ -50,7 +50,7 @@ export const ScheduleModal = ({
             </ChooseAppointment>
             
 
-            <LabelUser>Informe a localização desejada:</LabelUser>
+            <LabelUser style={{ marginRight: 30}}>Informe a localização desejada:</LabelUser>
             <Input style={{ fontFamily: 'MontserratAlternates_600SemiBold', width: '100%' }}
             placeholder="Informe a localização"
             placeholderTextColor="#34898F"

@@ -22,9 +22,7 @@ export const ViewPrescription = () => {
 
         <LabelUser>Descrição da consulta</LabelUser>
         <InputUser style={{ height: 121, fontFamily: 'MontserratAlternates_500Medium', paddingBottom: 30}}
-        placeholder="O paciente possuí uma infecção no
-        ouvido. Necessário repouse de 2 dias
-        e acompanhamento médico constante"
+        placeholder="O paciente possuí uma infecção no ouvido. Necessário repouse de 2 dias e acompanhamento médico constante"
         placeholderTextColor="#4E4B59"
         /> 
 

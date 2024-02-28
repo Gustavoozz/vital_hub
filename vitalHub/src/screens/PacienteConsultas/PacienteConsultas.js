@@ -10,6 +10,7 @@ import { CardPaciente } from "../../components/CardPaciente/CardPaciente"
 import { ScheduleModal } from "../../components/ScheduleModal/ScheduleModal"
 import { NotificationModal } from "../../components/NotificationModal/NotificationModal"
 import { CancelationModal } from "../../components/CancelationModal/CancelationModal"
+import { ButtonPatient } from "../../components/ButtonPatient/ButtonPatient"
 
 
 const Consultas = [
@@ -20,9 +21,10 @@ export const PacienteConsultas = () => {
 
     const [ statusLista, setStatusLista ] = useState("pendente");
     const [ statusType, setStatusType ] = useState("Rotina");
+
     const [ showModalCancel, setShowModalCancel ] = useState(false);
     const [ showModalSchedule, setShowModalSchedule ] = useState(false);
-    const [ showModalNotification, setShowModalNotification ] = useState(true);
+    const [ showModalNotification, setShowModalNotification ] = useState(false);
     
     return(
         <Container>
@@ -79,11 +81,9 @@ export const PacienteConsultas = () => {
             showsVerticalScrollIndicator={false}
             />
             
-            <AppointmentBox>
-                <AppointmentIcon onPressSchedule={() => setShowModalSchedule(true)}
-                source={require('../../assets/jam_medical.png')}
-                />
-            </AppointmentBox>
+            <ButtonPatient
+            onPressSchedule={() => setShowModalSchedule(true)}
+            />
 
             <CancelationModal
             visible={showModalCancel}
@@ -92,7 +92,7 @@ export const PacienteConsultas = () => {
 
             <ScheduleModal
             visible={showModalSchedule}
-            setShowModalCancel={setShowModalSchedule}
+            setShowModalSchedule={setShowModalSchedule}
             />
 
             <NotificationModal

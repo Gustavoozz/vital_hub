@@ -42,9 +42,10 @@ export const MedicoConsultas = () => {
             <UserDoctor
             source={require('../../assets/UserDoctor.png')}
             />  
+            
             <InfoContainer>
-                 <UserText>Bem-vindo</UserText>
-               <MontSerratWhite>Dr. Claudio </MontSerratWhite>
+            <UserText>Bem-vindo</UserText>
+            <MontSerratWhite>Dr. Claudio</MontSerratWhite>
             </InfoContainer>
             
             <NotificationBell

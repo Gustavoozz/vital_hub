@@ -18,14 +18,14 @@ export const UserDoctor = styled.Image`
     height: 60px;
     border-radius: 5px;
 
-    margin-top: 30px;
+    margin-top: 0px;
 `
 
 export const NotificationBell = styled.Image`
     width: 18px;
     height: 18px;
     margin-left: 160px;
-    margin-top: 60px;
+    margin-top: 20px;
 `
 
 export const Clock = styled.Image`
@@ -34,10 +34,6 @@ export const Clock = styled.Image`
     color: ${(props) => props.situacao == "pendente" ? "#4E4B59" : "#49B3BA"};
 `
 
-export const AppointmentIcon = styled.Image`
-    width: 32px;
-    height: 32px;
-`
 
 export const CalendarIcon = styled.Image`
     width: 10px;

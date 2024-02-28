@@ -56,21 +56,20 @@ export const HeaderHome = styled(LinearGradient).attrs({
    })`
    width: 100%;
    border-radius: 0px 0px 15px 15px;
-   width: 100%;
-   height: 144px;
-   padding: 15px;
+   height: 102px;
+   padding: 0px;
+
    flex-direction: row;
+   align-items: center;
+   justify-content: center;
    `
 
 export const InfoContainer = styled.View`
-    padding: 0px;
     justify-content: center;
     padding: 5px;
-
+    align-items: center;
     width: 30%;
     height: 30%;
-    margin-left: 10px;
-    margin-top: 50px;
 `
 
 export const ImageContainer = styled.View`
@@ -86,7 +85,7 @@ export const DoctorContainer = styled.View`
 
 `
 
-export const AppointmentBox = styled.View`
+export const AppointmentBox = styled.TouchableOpacity`
    width: 60px;
    height: 60px;
    border-radius: 7px;
@@ -100,6 +99,8 @@ export const AppointmentBox = styled.View`
    margin-left: 330px;
    margin-bottom: 20px;
 `
+
+
 
 
 
