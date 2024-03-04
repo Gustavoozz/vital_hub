@@ -1,6 +1,6 @@
-import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons'
+import { FontAwesome6, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons'
 import { ContainerUser, ContentProntuario, PhotoContainer } from '../../components/Container/Style'
-import { InputUser } from '../../components/Input/Style'
+import { InputUser, PhotoButton } from '../../components/Input/Style'
 import { SubTextQuick } from '../../components/Text/Text'
 import { ButtonTitle, LabelUser, TitleUser } from '../../components/Title/Style'
 import { UserContainer } from '../../components/UserContainer/Style'
@@ -22,7 +22,7 @@ export const ViewPrescription = () => {
 
         <LabelUser>Descrição da consulta</LabelUser>
         <InputUser style={{ height: 121, fontFamily: 'MontserratAlternates_500Medium', paddingBottom: 30}}
-        placeholder="O paciente possuí uma infecção no ouvido. Necessário repouse de 2 dias e acompanhamento médico constante"
+        placeholder={`O paciente possuí uma infecção no ouvido.\nNecessário repouse de 2 dias e  \nacompanhamento médico constante`}
         placeholderTextColor="#4E4B59"
         /> 
 
@@ -41,11 +41,12 @@ export const ViewPrescription = () => {
         
         <View style={{ width: '100%', alignItems: 'center'}}>
         <LabelUser>Exames médicos</LabelUser>
-        <MaterialIcons name="security-update-warning" size={24} color="black" style={{ position: 'relative', top: 68.1, zIndex: 1, right: 120}}/>
-        <InputUser style={{ height: 111, fontFamily: 'MontserratAlternates_500Medium', paddingBottom: 0}}
+        <FontAwesome6 name="file-arrow-down" size={24} color="black" style={{ position: 'absolute', top: 108.1, zIndex: 1, right: 300}}/>
+
+        <PhotoButton style={{ height: 111, fontFamily: 'MontserratAlternates_500Medium', paddingBottom: 0}}
         placeholder="                  Nenhuma foto informada"
         placeholderTextColor="#4E4B59"
-        /> 
+        ><ButtonTitle style={{ fontFamily: 'MontserratAlternates_500Medium', fontSize: 14, color: '#4E4B59', textTransform: 'none', marginTop: 43, marginLeft: 80}}>Nenhuma foto informada</ButtonTitle></PhotoButton>
         </View>
 
         <View style={{ width: '90%', alignItems: 'center', flexDirection: 'row', borderBottomWidth: 2, paddingBottom: 10, borderColor: '#8C8A97'}}>
@@ -54,7 +55,7 @@ export const ViewPrescription = () => {
             <ButtonTitle style={{ fontFamily: 'MontserratAlternates_700Bold', textTransform: 'none'}}>Enviar</ButtonTitle>
         </SendPhotoButton>
 
-        <CancelText style={{ color: '#C81D25'}}>Cancelar</CancelText>
+        <CancelText style={{ color: '#C81D25', alignItems: 'center', marginRight: 70}}>Cancelar</CancelText>
         </View>
 
         <InputUser style={{ height: 103, fontFamily: 'MontserratAlternates_500Medium', paddingBottom: 0, marginTop: 30}}

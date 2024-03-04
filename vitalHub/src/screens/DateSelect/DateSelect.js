@@ -10,7 +10,7 @@ import { SchedulingModal } from "../../components/SchedulingModal/SchedulingModa
 
 export const DateSelect = () => {
 
-    const [showModalScheduling, setShowModalScheduling] = useState(true)
+    const [showModalScheduling, setShowModalScheduling] = useState(false)
 
     return(
     <Container style={{ backgroundColor: '#FAFAFA'}}>

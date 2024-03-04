@@ -7,6 +7,7 @@ import { CancelText } from "../Link/Style"
 
 
 export const AppointmentModal = ({
+    navigation,
     visible,
     setShowModalAppointment,
     ...rest
@@ -25,7 +26,7 @@ export const AppointmentModal = ({
             </InfoModalContainer>
            
 
-            <ModalButton style={{ marginTop: 15 }}>
+            <ModalButton onPress={() => navigation.navigate("Prontuario")} style={{ marginTop: 15 }}>
             <ButtonTitle>Inserir Prontuário</ButtonTitle>
             </ModalButton>
 

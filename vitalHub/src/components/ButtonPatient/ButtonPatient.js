@@ -1,11 +1,10 @@
+import { FontAwesome } from '@expo/vector-icons'
 import { AppointmentBox, AppointmentIcon } from './Style'
 
 export const ButtonPatient = ({ onPressSchedule }) => {
     return(
         <AppointmentBox onPress={onPressSchedule}>
-        <AppointmentIcon 
-        source={require('../../assets/jam_medical.png')}
-        />
+       <FontAwesome name="stethoscope" size={30} color="white" />
     </AppointmentBox>
     )
 }

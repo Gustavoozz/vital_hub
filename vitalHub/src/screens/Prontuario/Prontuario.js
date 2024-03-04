@@ -21,17 +21,17 @@ export const Prontuario = () => {
           
         <LabelProntuario>Descrição da Consulta</LabelProntuario>
         <InputProntuario style={{ fontFamily: 'MontserratAlternates_500Medium' }}
-        placeholder="Descrição"
+        placeholder="Descrição..."
         placeholderTextColor="#34898F"/>
 
         <LabelProntuario>Diagnóstico do paciente</LabelProntuario>
         <Input style={{ fontFamily: 'MontserratAlternates_500Medium' }}
-        placeholder="Diagnóstico"
+        placeholder="Diagnóstico..."
         placeholderTextColor="#34898F"/>
 
         <LabelProntuario>Prescrição médica</LabelProntuario>
         <InputProntuario style={{ fontFamily: 'MontserratAlternates_500Medium' }}
-        placeholder="Prescrição medica"
+        placeholder="Prescrição medica..."
         placeholderTextColor="#34898F"/>
 
         <Button>

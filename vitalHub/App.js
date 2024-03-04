@@ -8,18 +8,24 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { Navegacao } from './src/screens/Navegacao/Navegacao';
 import { Login } from './src/screens/Login/Login';
+
 import { RecuperarSenha } from './src/screens/RecuperarSenha/RecuperarSenha';
 import { VerificarSenha } from './src/screens/VerificarSenha/VerificarSenha';
 import { RedefinirSenha } from './src/screens/RedefinirSenha/RedefinirSenha';
+
 import { Cadastro } from './src/screens/Cadastro/Cadastro';
 import { Perfil } from './src/screens/Perfil/Perfil';
 import { MedicoConsultas } from './src/screens/MedicoConsultas/MedicoConsultas';
+
 import { Prontuario } from './src/screens/Prontuario/Prontuario';
 import { PacienteConsultas } from './src/screens/PacienteConsultas/PacienteConsultas';
 import { ClinicSelect } from './src/screens/ClinicSelect/ClinicSelect';
+
 import { DoctorSelect } from './src/screens/DoctorSelect/DoctorSelect';
 import { Localization } from './src/screens/Localization/Localization';
 import { DateSelect } from './src/screens/DateSelect/DateSelect';
+
+import SplashScreen from "./src/screens/SplashScreen/SplashScreen";
 import { ViewPrescription } from './src/screens/ViewPrescription/ViewPrescription';
 
 
@@ -52,7 +58,13 @@ export default function App() {
     // >> options ( title ): Título da tela.
 
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator>    
+        <Stack.Screen
+          name="SplashScreen"
+          component={SplashScreen}
+          options={{ headerShown: false }}
+        />
+
         <Stack.Screen
           name="Navegacao"
           component={Navegacao}
@@ -131,18 +143,19 @@ export default function App() {
             options={{title: "Localization"}}
         />
 
-<Stack.Screen
+        <Stack.Screen
             name="DateSelect"
             component={DateSelect}
             options={{title: "DateSelect"}}
         />
 
-<Stack.Screen
+        <Stack.Screen
             name="ViewPrescription"
             component={ViewPrescription}
             options={{title: "ViewPrescription"}}
         />
 
+      
       </Stack.Navigator>  
     </NavigationContainer>
   );

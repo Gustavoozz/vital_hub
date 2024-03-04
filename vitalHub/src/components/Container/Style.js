@@ -66,10 +66,10 @@ export const HeaderHome = styled(LinearGradient).attrs({
 
 export const InfoContainer = styled.View`
     justify-content: center;
-    padding: 5px;
-    align-items: center;
-    width: 30%;
-    height: 30%;
+    padding-left: 10px;
+    width: 40%;
+    height: 50%;
+    margin-right: 130px;
 `
 
 export const ImageContainer = styled.View`

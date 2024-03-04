@@ -16,6 +16,7 @@ import { useState } from "react"
 import { ListComponent } from "../../components/List/List"
 import { CancelationModal } from "../../components/CancelationModal/CancelationModal"
 import { AppointmentModal } from "../../components/AppointmentModal/AppointmentModal"
+import { Octicons } from "@expo/vector-icons"
 
 const Consultas = [
     { id: 1, nome: "Gustavo", situacao: "pendente" },
@@ -48,9 +49,7 @@ export const MedicoConsultas = () => {
             <MontSerratWhite>Dr. Claudio</MontSerratWhite>
             </InfoContainer>
             
-            <NotificationBell
-            source={require('../../assets/Bell.png')}
-            />
+            <Octicons name="bell-fill" size={24} color="white" />
             </HeaderHome>
 
             <DoctorContainer>

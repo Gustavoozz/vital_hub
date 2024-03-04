@@ -11,6 +11,7 @@ import { ScheduleModal } from "../../components/ScheduleModal/ScheduleModal"
 import { NotificationModal } from "../../components/NotificationModal/NotificationModal"
 import { CancelationModal } from "../../components/CancelationModal/CancelationModal"
 import { ButtonPatient } from "../../components/ButtonPatient/ButtonPatient"
+import { Fontisto, Octicons } from "@expo/vector-icons"
 
 
 const Consultas = [
@@ -38,9 +39,7 @@ export const PacienteConsultas = () => {
                <MontSerratWhite>Richard Kosta </MontSerratWhite>
             </InfoContainer>
 
-            <NotificationBell
-            source={require('../../assets/Bell.png')}
-            />
+            <Octicons name="bell-fill" size={24} color="white" />
             </HeaderHome>
 
             <DoctorContainer>

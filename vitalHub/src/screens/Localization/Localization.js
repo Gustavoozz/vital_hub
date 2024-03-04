@@ -5,6 +5,7 @@ import { MapClinic } from "../../components/Logo/Style"
 import { SubTextQuick } from "../../components/Text/Text"
 import { LabelUser, Title } from "../../components/Title/Style"
 import { TextClinic } from "../ClinicSelect/Style"
+import { CancelText } from "../../components/Link/Style"
 
 export const Localization = () => {
     return(
@@ -35,7 +36,10 @@ export const Localization = () => {
             placeholder="Moema-SP"
             placeholderTextColor="#33303E"/>   
             </View>
+
             </CityContainer>
+
+            <CancelText style={{ marginBottom: 0 }}>Voltar</CancelText>
         </Container>
     )
 }

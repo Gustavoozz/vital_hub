@@ -72,7 +72,6 @@ export const HourButton = styled.TouchableOpacity`
     margin-top: 7px;
 
     align-items: center;
-    justify-content: center;
     gap: 5px;
 `
 

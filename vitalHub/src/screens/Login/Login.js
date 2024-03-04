@@ -6,6 +6,7 @@ import { LinkMedium, TextAccount, TextReenviar } from "../../components/Link/Sty
 import { Logo } from "../../components/Logo/Style";
 import { ButtonTitle, ButtonTitleGoogle, Title } from "../../components/Title/Style";
 import { ContentAccount } from "../../components/ContentAccount/Style";
+import { AntDesign } from "@expo/vector-icons";
 
 export const Login = ({ navigation }) => {
     return(
@@ -33,7 +34,7 @@ export const Login = ({ navigation }) => {
             </Button>
 
             <ButtonGoogle>
-                <Image source={require('../../assets/GOOGLE.png')}/>
+                <AntDesign name="google" size={20} color="#496BBA" />
                 <ButtonTitleGoogle>Entrar com Google</ButtonTitleGoogle>
             </ButtonGoogle>
 

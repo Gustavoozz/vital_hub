@@ -2,6 +2,7 @@ import { Image } from "react-native"
 import { ButtonTitle, TitleUser } from "../Title/Style"
 import { Age, CancelButton, CancelTitle, CardContainer, Hour, HourButton, InfoConsulta, InfoPaciente, PatientContainer, PatientPhoto, TitlePatient, Type } from "./Style"
 import { Clock } from "../Logo/Style"
+import { AntDesign } from "@expo/vector-icons"
 
 export const CardPaciente = ({ imagePatient, 
     patientName, 
@@ -26,7 +27,8 @@ export const CardPaciente = ({ imagePatient,
                     </InfoPaciente>
 
                    <HourButton situacao={situacao}>
-                        <Clock situacao={situacao} source={require('../../assets/Clock.png')}/>
+                        <Clock situacao={situacao} />
+                        <AntDesign situacao={situacao} name="clockcircle" size={15} color="#49B3BA" />
                         <Hour situacao={situacao}>17:00</Hour>
                     </HourButton>
                 </InfoConsulta>

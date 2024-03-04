@@ -25,24 +25,28 @@ export const VerificarSenha = ({ navigation }) => {
         <TextQuick>Digite o código de 4 dígitos enviado para <TextReenviar> username@email.com</TextReenviar></TextQuick>
 
         <ContentAccount>
-        <InputVerify style={{ fontFamily: 'Quicksand_600SemiBold' }}
+        <InputVerify style={{ fontFamily: 'Quicksand_600SemiBold', color: '#34898F' }}
         placeholder="0"
-        placeholderTextColor="#34898F"     
+        placeholderTextColor="#34898F"   
+        maxLength={1} 
         />
 
-        <InputVerify style={{ fontFamily: 'Quicksand_600SemiBold' }}
+        <InputVerify style={{ fontFamily: 'Quicksand_600SemiBold', color: '#34898F' }}
         placeholder="0"
-        placeholderTextColor="#34898F"     
+        placeholderTextColor="#34898F" 
+        maxLength={1}     
         />
 
-        <InputVerify style={{ fontFamily: 'Quicksand_600SemiBold' }}
+        <InputVerify style={{ fontFamily: 'Quicksand_600SemiBold', color: '#34898F' }}
         placeholder="0"
-        placeholderTextColor="#34898F"     
+        placeholderTextColor="#34898F"   
+        maxLength={1}    
         />
 
-        <InputVerify style={{ fontFamily: 'Quicksand_600SemiBold' }}
+        <InputVerify style={{ fontFamily: 'Quicksand_600SemiBold', color: '#34898F' }}
         placeholder="0"
-        placeholderTextColor="#34898F"     
+        placeholderTextColor="#34898F"   
+        maxLength={1}    
         />
         </ContentAccount>
 

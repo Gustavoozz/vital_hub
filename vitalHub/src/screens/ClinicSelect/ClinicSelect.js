@@ -1,4 +1,5 @@
 
+import { AntDesign } from "@expo/vector-icons"
 import { Button } from "../../components/Button/Style"
 import { CancelTitle, Hour } from "../../components/CardPaciente/Style"
 import { Container } from "../../components/Container/Style"
@@ -19,13 +20,13 @@ export const ClinicSelect = () => {
 
             <OtherContent>
                 <AvaliationInfo>
-                <StarIcon source={require('../../assets/Star.png')}/>
+                <AntDesign name="star" size={20} color="#F9A620" />
                 <StarText>4,5</StarText> 
                 </AvaliationInfo>
                 
 
                 <DayInfo>
-                <CalendarIcon source={require('../../assets/Calendar.png')}/>
+                <AntDesign name="calendar" size={17} color="#49B3BA" />
                 <Hour>Seg-Sex</Hour>
                 </DayInfo> 
              </OtherContent>     
@@ -41,13 +42,13 @@ export const ClinicSelect = () => {
 
             <OtherContent>
                 <AvaliationInfo>
-                <StarIcon source={require('../../assets/Star.png')}/>
+                <AntDesign name="star" size={20} color="#F9A620" />
                 <StarText>4,5</StarText> 
                 </AvaliationInfo>
                 
 
                 <DayInfo>
-                <CalendarIcon source={require('../../assets/Calendar.png')}/>
+                <AntDesign name="calendar" size={17} color="#49B3BA" />
                 <Hour>Seg-Sex</Hour>
                 </DayInfo> 
              </OtherContent>     
@@ -62,13 +63,13 @@ export const ClinicSelect = () => {
 
             <OtherContent>
                 <AvaliationInfo>
-                <StarIcon source={require('../../assets/Star.png')}/>
+                <AntDesign name="star" size={20} color="#F9A620" />
                 <StarText>4,5</StarText> 
                 </AvaliationInfo>
                 
 
                 <DayInfo>
-                <CalendarIcon source={require('../../assets/Calendar.png')}/>
+                <AntDesign name="calendar" size={17} color="#49B3BA" />
                 <Hour>Seg-Sex</Hour>
                 </DayInfo> 
              </OtherContent>     
@@ -83,13 +84,13 @@ export const ClinicSelect = () => {
 
             <OtherContent>
                 <AvaliationInfo>
-                <StarIcon source={require('../../assets/Star.png')}/>
+                <AntDesign name="star" size={20} color="#F9A620" />
                 <StarText>4,5</StarText> 
                 </AvaliationInfo>
                 
 
                 <DayInfo>
-                <CalendarIcon source={require('../../assets/Calendar.png')}/>
+                <AntDesign name="calendar" size={17} color="#49B3BA" />
                 <Hour>Seg-Sex</Hour>
                 </DayInfo> 
              </OtherContent>     

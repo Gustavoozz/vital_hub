@@ -60,6 +60,7 @@ export const StarText = styled.Text`
     font-size: 14px;
     color: #F9A620;
     flex-direction: row;
+    margin-left: 3px;
 `
 
 export const CancelLink = styled(LinkMedium)`
