@@ -30,7 +30,7 @@ export const RecuperarSenha = ({ navigation }) => {
        placeholderTextColor="#34898F"
        />
 
-       <Button onPress={() => navigation.navigate("VerificarSenha")}>
+       <Button onPress={() => navigation.replace("VerificarSenha")}>
         <ButtonTitle>Continuar</ButtonTitle>
        </Button>
     </Container>

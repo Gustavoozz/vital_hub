@@ -27,6 +27,7 @@ import { DateSelect } from './src/screens/DateSelect/DateSelect';
 
 import SplashScreen from "./src/screens/SplashScreen/SplashScreen";
 import { ViewPrescription } from './src/screens/ViewPrescription/ViewPrescription';
+import { Main } from './src/screens/Main/Main';
 
 
 const Stack = createNativeStackNavigator();
@@ -58,24 +59,30 @@ export default function App() {
     // >> options ( title ): Título da tela.
 
     <NavigationContainer>
-      <Stack.Navigator>    
+      <Stack.Navigator> 
+
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{title: "Login"}}
+        />  
+
+        <Stack.Screen
+          name="Main"
+          component={Main}      
+        />
+
         <Stack.Screen
           name="SplashScreen"
           component={SplashScreen}
           options={{ headerShown: false }}
         />
 
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Navegacao"
           component={Navegacao}
           options={{title: "Navegação"}}
-        />
-
-        <Stack.Screen
-          name="Login"
-          component={Login}
-          options={{title: "Login"}}
-        />
+        /> */}
 
         <Stack.Screen
           name="RecuperarSenha"

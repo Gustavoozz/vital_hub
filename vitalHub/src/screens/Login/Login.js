@@ -9,6 +9,11 @@ import { ContentAccount } from "../../components/ContentAccount/Style";
 import { AntDesign } from "@expo/vector-icons";
 
 export const Login = ({ navigation }) => {
+
+    async function Login() {
+        navigation.navigate("Main")
+    }
+
     return(
         <Container>
             <Logo
@@ -27,9 +32,9 @@ export const Login = ({ navigation }) => {
             placeholderTextColor="#34898F"
             />
 
-            <LinkMedium onPress={() => navigation.navigate("RecuperarSenha")}>Esqueceu sua senha?</LinkMedium>
+            <LinkMedium onPress={() => navigation.replace("RecuperarSenha")}>Esqueceu sua senha?</LinkMedium>
 
-            <Button>
+            <Button onPress={(e) => Login()}>
                 <ButtonTitle>Entrar</ButtonTitle>
             </Button>
 
@@ -39,7 +44,7 @@ export const Login = ({ navigation }) => {
             </ButtonGoogle>
 
             <ContentAccount>
-                <TextAccount>Não tem conta? <TextReenviar onPress={() => navigation.navigate("Cadastro")}>Crie uma conta agora!</TextReenviar></TextAccount>
+                <TextAccount>Não tem conta? <TextReenviar onPress={() => navigation.replace("Cadastro")}>Crie uma conta agora!</TextReenviar></TextAccount>
             </ContentAccount>
         </Container>
     );

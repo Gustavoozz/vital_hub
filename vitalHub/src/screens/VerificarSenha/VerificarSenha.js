@@ -52,7 +52,7 @@ export const VerificarSenha = ({ navigation }) => {
 
 
         <Button>
-            <ButtonTitle>Entrar</ButtonTitle>
+            <ButtonTitle onPress={() => navigation.replace("RecuperarSenha")}>Entrar</ButtonTitle>
         </Button>
 
         <TextReenviar>Reenviar Código</TextReenviar>
