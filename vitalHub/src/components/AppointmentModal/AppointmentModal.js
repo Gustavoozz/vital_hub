@@ -13,7 +13,7 @@ export const AppointmentModal = ({
     ...rest
 }) => {
     return(
-        <Modal {...rest} visible={visible} transparent={true} animationType="fade">
+        <Modal {...rest} visible={visible} transparent={true} animationType="slide">
             <PatientModal>
             <ModalContent>
 
@@ -25,7 +25,6 @@ export const AppointmentModal = ({
             <ModalQuick style={{ color: '#4E4B59', marginTop: 0 }}>22 anos   gustavonascimento928@gmail.com</ModalQuick>
             </InfoModalContainer>
            
-
             <ModalButton onPress={() => navigation.navigate("Prontuario")} style={{ marginTop: 15 }}>
             <ButtonTitle>Inserir Prontuário</ButtonTitle>
             </ModalButton>

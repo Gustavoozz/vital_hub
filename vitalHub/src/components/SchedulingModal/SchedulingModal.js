@@ -3,12 +3,16 @@ import { ButtonTitle, Title } from "../Title/Style"
 
 import { CancelText } from "../Link/Style"
 import { ModalButton, ModalContent, ModalText, ModalTextBig, ModalTextMini, PatientModal } from "../NotificationModal/Style"
+import { useNavigation } from '@react-navigation/native'
 
 export const SchedulingModal = ({
     visible,
     setShowModalScheduling,
     ...rest
 }) => {
+
+    const navigation = useNavigation();
+    
     return(
         <Modal {...rest} visible={visible} transparent={true} animationType="fade">
         <PatientModal   >
@@ -17,7 +21,6 @@ export const SchedulingModal = ({
                 <Title>Agendar consulta</Title>
                 <ModalText>Consulte os dados selecionados para a sua consulta</ModalText>
                 
-
                 <ModalTextBig style={{ marginTop: 30 }}>Data da consulta</ModalTextBig>
                 <ModalTextMini>1 de Novembro de 2023</ModalTextMini>
 
@@ -28,11 +31,10 @@ export const SchedulingModal = ({
                 <ModalTextBig>Local da consulta</ModalTextBig>
                 <ModalTextMini>São Paulo, SP</ModalTextMini>
 
-
                 <ModalTextBig>Tipo da consulta</ModalTextBig>
                 <ModalTextMini>Rotina</ModalTextMini>
 
-                <ModalButton>
+                <ModalButton onPress={() => navigation.replace("PacienteConsultas")}>
                     <ButtonTitle>Confirmar</ButtonTitle>
                 </ModalButton>
 

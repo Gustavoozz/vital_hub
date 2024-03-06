@@ -1,13 +1,12 @@
 import { Modal } from "react-native"
 import { ChooseAppointment, InfoSchedule, ScheduleContent } from "./Style"
 import { ButtonTitle, LabelUser, Title } from "../Title/Style"
-import { Input, SmallInputSchedule } from "../Input/Style"
+import { Input } from "../Input/Style"
 import { Button } from "../Button/Style"
 import { CancelText } from "../Link/Style"
-import { ContainerButton } from "../../screens/MedicoConsultas/Style"
-import { BtnListAppointment } from "../BtnListAppointment/BtnListAppointment"
 import { useState } from "react"
 import { BtnAppointmentType } from "../BtnAppointmentType/BtnAppointmentType"
+import { useNavigation } from '@react-navigation/native'
 
 export const ScheduleModal = ({
     visible,
@@ -15,16 +14,15 @@ export const ScheduleModal = ({
     ...rest
 }) => {
 
-    const [statusLista, setStatusLista] = useState("pendente");
     const [statusType, setStatusType ] = useState("Rotina")
-
+    const navigation = useNavigation();
+    
     return(
-        <Modal {...rest} visible={visible} transparent={true} animationType="fade">
+        <Modal {...rest} visible={visible} transparent={true} animationType="slide">
             <ScheduleContent>
             <InfoSchedule>
 
             <Title>Agendar consulta</Title>
-
 
             <LabelUser style={{ marginRight: 30 }}>Informe o nível da consulta:</LabelUser>
             <ChooseAppointment> 
@@ -50,13 +48,16 @@ export const ScheduleModal = ({
             </ChooseAppointment>
             
 
-            <LabelUser style={{ marginRight: 30}}>Informe a localização desejada:</LabelUser>
+            <LabelUser style={{ marginRight: 30, marginBottom: 10 }}>Informe a localização desejada:</LabelUser>
             <Input style={{ fontFamily: 'MontserratAlternates_600SemiBold', width: '100%' }}
             placeholder="Informe a localização"
             placeholderTextColor="#34898F"
             />
 
-            <Button style={{ width: '100%' }}>
+            <Button 
+            onPress={() => navigation.replace("ClinicSelect")}
+            style={{ width: '100%' }}
+            >
             <ButtonTitle>Confirmar</ButtonTitle>
             </Button>
 

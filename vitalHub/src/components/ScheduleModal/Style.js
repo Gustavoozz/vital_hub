@@ -10,6 +10,7 @@ export const ScheduleContent = styled.View`
 export const InfoSchedule = styled.View`
     padding: 30px 30px 10px;
     width: 100%;
+    margin-top: 350px;
     border-radius: 10px;
     background-color: #FFF;
     align-items: center;

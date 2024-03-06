@@ -9,6 +9,7 @@ export const CardContent = styled.View`
     border-radius: 5px;
     margin-bottom: 20px;
     flex-direction: row;
+    height: 100px;
 `
 
 export const TextContainer = styled.View`

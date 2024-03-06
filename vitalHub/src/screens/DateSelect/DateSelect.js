@@ -7,26 +7,26 @@ import { SelectInput } from "../../components/SelectInput/SelectInput"
 import { ButtonTitle, LabelUser, Title } from "../../components/Title/Style"
 import { CancelLink } from "../ClinicSelect/Style"
 import { SchedulingModal } from "../../components/SchedulingModal/SchedulingModal"
+import { ButtonDate } from "../../components/ButtonDate/ButtonDate"
 
-export const DateSelect = () => {
+export const DateSelect = ({ navigation }) => {
 
-    const [showModalScheduling, setShowModalScheduling] = useState(false)
+    const [showModalScheduling, setShowModalScheduling] = useState(false);
 
     return(
     <Container style={{ backgroundColor: '#FAFAFA'}}>
         <Title style={{ marginTop: 30, marginBottom: 30 }}>Selecionar data</Title>
-
 
         <CalendarComponent/>
 
         <LabelUser>Selecione um horário disponível</LabelUser>
         <SelectInput/>
 
-        <Button>
+        <ButtonDate onPressScheduling={() => setShowModalScheduling(true)}>
             <ButtonTitle>Confirmar</ButtonTitle>
-        </Button>
+        </ButtonDate>
 
-        <CancelLink style={{ marginTop: 70 }}>Cancelar</CancelLink>
+        <CancelLink onPress={() => navigation.replace("DoctorSelect")} style={{ marginTop: 40 }}>Cancelar</CancelLink>
 
         <SchedulingModal
         visible={showModalScheduling}

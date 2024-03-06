@@ -1,4 +1,3 @@
-import { Image } from "react-native";
 import { Button, ButtonGoogle } from "../../components/Button/Style";
 import { Container } from "../../components/Container/Style";
 import { Input } from "../../components/Input/Style";
@@ -6,9 +5,18 @@ import { LinkMedium, TextAccount, TextReenviar } from "../../components/Link/Sty
 import { Logo } from "../../components/Logo/Style";
 import { ButtonTitle, ButtonTitleGoogle, Title } from "../../components/Title/Style";
 import { ContentAccount } from "../../components/ContentAccount/Style";
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, MaterialCommunityIcons } from "@expo/vector-icons";
+import { useState } from "react";
 
 export const Login = ({ navigation }) => {
+
+    // Show password eye:
+    const [password, setPassword] = useState(''); 
+    const [showPassword, setShowPassword] = useState(false); 
+
+    const toggleShowPassword = () => { 
+        setShowPassword(!showPassword); 
+    }; 
 
     async function Login() {
         navigation.navigate("Main")
@@ -30,7 +38,18 @@ export const Login = ({ navigation }) => {
             <Input style={{ fontFamily: 'MontserratAlternates_600SemiBold' }}
             placeholder="Senha"
             placeholderTextColor="#34898F"
+            secureTextEntry={!showPassword}
+            value={password}
+            onChangeText={setPassword}
             />
+
+            <MaterialCommunityIcons
+            style={{ marginLeft: 300, marginBottom: 0, position: 'relative', bottom: 55 }}
+            name={showPassword ? 'eye-off' : 'eye'} 
+            size={24} 
+            color="#49B3BA"
+            onPress={toggleShowPassword} 
+            /> 
 
             <LinkMedium onPress={() => navigation.replace("RecuperarSenha")}>Esqueceu sua senha?</LinkMedium>
 

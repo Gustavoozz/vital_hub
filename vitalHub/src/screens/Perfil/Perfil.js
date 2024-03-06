@@ -59,7 +59,7 @@ export const Perfil = ({ navigation }) => {
             <ButtonTitle>Editar</ButtonTitle>
             </Button>
 
-            <ButtonUser>
+            <ButtonUser onPress={() => navigation.replace("Login")}>
                 <ButtonTitle>Sair do App</ButtonTitle>
             </ButtonUser>
         </ContainerUser>

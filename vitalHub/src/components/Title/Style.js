@@ -4,7 +4,7 @@ export const Title = styled.Text`
     font-family: "MontserratAlternates_600SemiBold";
     font-size: 20px;
     color: #33303E;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 `
 
 export const ButtonTitle = styled.Text`

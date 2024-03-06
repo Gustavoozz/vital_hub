@@ -7,7 +7,7 @@ import { CalendarIcon, StarIcon } from "../../components/Logo/Style"
 import { ButtonTitle, Title } from "../../components/Title/Style"
 import { AvaliationInfo,  CancelLink,  CardContent, DayInfo, OtherContent, StarText, TextClinic, TextContainer } from "./Style"
 
-export const ClinicSelect = () => {
+export const ClinicSelect = ({ navigation }) => {
     return(
         <Container>
             <Title style={{ marginTop: 30, marginBottom: 70 }}>Selecionar clínica</Title>
@@ -36,14 +36,14 @@ export const ClinicSelect = () => {
 
             <CardContent>
             <TextContainer>
-                <Title style={{ fontSize: 16, marginBottom: 0, width: '70%' }}>Clínica Natureh</Title>
+                <Title style={{ fontSize: 16, marginBottom: 0, width: '100%' }}>Clinica Villa Lobos</Title>
                 <TextClinic>São Paulo, SP</TextClinic>  
             </TextContainer>
 
             <OtherContent>
                 <AvaliationInfo>
                 <AntDesign name="star" size={20} color="#F9A620" />
-                <StarText>4,5</StarText> 
+                <StarText>4,2</StarText> 
                 </AvaliationInfo>
                 
 
@@ -57,20 +57,20 @@ export const ClinicSelect = () => {
 
             <CardContent>
             <TextContainer>
-                <Title style={{ fontSize: 16, marginBottom: 0, width: '70%' }}>Clínica Natureh</Title>
-                <TextClinic>São Paulo, SP</TextClinic>  
+                <Title style={{ fontSize: 16, marginBottom: 0, width: '100%' }}>Diamond Pró-Mulher</Title>
+                <TextClinic>Taboão, SP</TextClinic>  
             </TextContainer>
 
             <OtherContent>
                 <AvaliationInfo>
                 <AntDesign name="star" size={20} color="#F9A620" />
-                <StarText>4,5</StarText> 
+                <StarText>4,8</StarText> 
                 </AvaliationInfo>
                 
 
                 <DayInfo>
                 <AntDesign name="calendar" size={17} color="#49B3BA" />
-                <Hour>Seg-Sex</Hour>
+                <Hour>Seg-Sab</Hour>
                 </DayInfo> 
              </OtherContent>     
          
@@ -78,29 +78,31 @@ export const ClinicSelect = () => {
 
             <CardContent>
             <TextContainer>
-                <Title style={{ fontSize: 16, marginBottom: 0, width: '70%' }}>Clínica Natureh</Title>
-                <TextClinic>São Paulo, SP</TextClinic>  
+                <Title style={{ fontSize: 16, marginBottom: 0, width: '100%' }}>SP Oncologia Clínica</Title>
+                <TextClinic>Taboão, SP</TextClinic>  
             </TextContainer>
 
             <OtherContent>
                 <AvaliationInfo>
                 <AntDesign name="star" size={20} color="#F9A620" />
-                <StarText>4,5</StarText> 
+                <StarText>4,2</StarText> 
                 </AvaliationInfo>
                 
 
                 <DayInfo>
                 <AntDesign name="calendar" size={17} color="#49B3BA" />
-                <Hour>Seg-Sex</Hour>
+                <Hour>Seg-Sab</Hour>
                 </DayInfo> 
              </OtherContent>     
             </CardContent>
 
-            <Button style={{ marginTop: 20 }}>
+            <Button 
+            onPress={() => navigation.replace("DoctorSelect")}
+            style={{ marginTop: 20 }}>
                 <ButtonTitle>Continuar</ButtonTitle>
             </Button>
 
-          <CancelLink>Cancelar</CancelLink>
+          <CancelLink onPress={() => navigation.replace("PacienteConsultas")}>Cancelar</CancelLink>
 
             </Container>
     )

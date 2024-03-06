@@ -10,7 +10,7 @@ export const NotificationModal = ({
     ...rest
 }) => {
     return(
-        <Modal {...rest} visible={visible} transparent={true} animationType="fade">
+        <Modal {...rest} visible={visible} transparent={true} animationType="slide">
             <PatientModal>
                 <ModalContent>
                     <ModalDoctorPhoto

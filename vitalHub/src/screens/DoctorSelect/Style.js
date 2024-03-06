@@ -11,7 +11,7 @@ export const DoctorCard = styled.View`
     gap: 30px;
 
     padding-left: 10px;
-    height: 110px;
+    height: 120px;
 `
 
 export const InformationContainer = styled.View`
