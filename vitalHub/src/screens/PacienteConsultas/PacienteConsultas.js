@@ -16,9 +16,10 @@ import { Fontisto, Octicons } from "@expo/vector-icons"
 
 const Consultas = [
     { id: 1, nome: "Gustavo", situacao: "pendente" },
+    { id: 2, nome: "Gustavo", situacao: "realizado" },
 ]
 
-export const PacienteConsultas = () => {
+export const PacienteConsultas = ({ navigation }) => {
 
     const [ statusLista, setStatusLista ] = useState("pendente");
     const [ statusType, setStatusType ] = useState("Rotina");
@@ -71,7 +72,9 @@ export const PacienteConsultas = () => {
             renderItem={({item}) =>
             statusLista == item.situacao && (
                 <CardPaciente
+                navigation={navigation}
                 situacao={item.situacao}
+                onPressNotification={() => setShowModalNotification(true)}
                 onPressCancel={() => setShowModalCancel(true)}
                 onPressAppointment={() => setShowModalAppointment(true)}
                 />
@@ -98,6 +101,8 @@ export const PacienteConsultas = () => {
             visible={showModalNotification}
             setShowModalNotification={setShowModalNotification}
             />  
+
+            
 
             </DoctorContainer>
         </Container>

@@ -5,15 +5,12 @@ import { Input } from "../../components/Input/Style";
 import { ArrowIcon, Logo } from "../../components/Logo/Style";
 import { TextQuick } from "../../components/Text/Text";
 import { ButtonTitle, Title } from "../../components/Title/Style";
+import { Feather } from "@expo/vector-icons";
 
 export const RedefinirSenha = ({ navigation }) => {
     return(
         <Container>
-            <ArrowIcon onPress={() => navigation.navigate("Login")}>
-            <Image
-             source={require('../../assets/Back.png')}
-            />
-           </ArrowIcon>
+         <Feather style={{ position: 'absolute', left: 20, top: 30}} name="x-circle" size={30} color="#34898F" onPress={() => navigation.navigate("Login")}/>
         <Logo
         source={require('../../assets/VitalHub_Logo.png')}
         />

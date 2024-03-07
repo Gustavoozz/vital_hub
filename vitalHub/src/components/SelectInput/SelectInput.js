@@ -23,7 +23,7 @@ export const SelectInput = () => {
         inputStyles={{ color: '#34898F'}}
         dropdownStyles={{ borderWidth: 2, borderColor: '#60BFC5' }}
         dropdownTextStyles={{ color: '#34898F'}}
-        arrowicon={<Ionicons     name="arrow-down-circle" size={24} color="#34898F" />}
+        arrowicon={<Ionicons name="arrow-down-circle" size={24} color="#34898F" />}
         save="value"
         search={false}
 />

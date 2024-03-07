@@ -8,7 +8,7 @@ import { View } from 'react-native'
 import { SendPhotoButton } from '../../components/Button/Style'
 import { CancelText } from '../../components/Link/Style'
 
-export const ViewPrescription = () => {
+export const ViewPrescription = ({ navigation }) => {
     return(
         <ContainerUser contentContainerStyle={{flexGrow: 1, alignItems: 'center'}}>
         <PhotoContainer>
@@ -63,14 +63,7 @@ export const ViewPrescription = () => {
         placeholderTextColor="#4E4B59"
         /> 
 
-        <CancelText>Voltar</CancelText>
-       
-
-       
-        
-        
-
-
+        <CancelText onPress={() => navigation.replace("Main")}>Voltar</CancelText>
         </ContainerUser>
     )
 }

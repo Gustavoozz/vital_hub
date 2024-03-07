@@ -7,7 +7,7 @@ import { LabelUser, Title } from "../../components/Title/Style"
 import { TextClinic } from "../ClinicSelect/Style"
 import { CancelText } from "../../components/Link/Style"
 
-export const Localization = () => {
+export const Localization = ({ navigation }) => {
     return(
         <Container>
             <MapClinic
@@ -39,7 +39,7 @@ export const Localization = () => {
 
             </CityContainer>
 
-            <CancelText style={{ marginBottom: 0 }}>Voltar</CancelText>
+            <CancelText onPress={() => navigation.replace("PacienteConsultas")} style={{ marginBottom: 0 }}>Voltar</CancelText>
         </Container>
     )
 }

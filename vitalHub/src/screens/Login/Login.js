@@ -22,6 +22,10 @@ export const Login = ({ navigation }) => {
         navigation.navigate("Main")
     }
 
+    async function LoginDoctor() {
+        navigation.navigate("MainDoctor")
+    }
+
     return(
         <Container>
             <Logo
@@ -55,6 +59,10 @@ export const Login = ({ navigation }) => {
 
             <Button onPress={(e) => Login()}>
                 <ButtonTitle>Entrar</ButtonTitle>
+            </Button>
+
+            <Button onPress={(e) => LoginDoctor()}>
+                <ButtonTitle>Entrar como Doutor ( Teste )</ButtonTitle>
             </Button>
 
             <ButtonGoogle>

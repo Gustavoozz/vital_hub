@@ -7,7 +7,7 @@ export const CardContainer = styled.View`
     margin-bottom: 20px;
 `
 
-export const PatientContainer = styled.View`
+export const PatientContainer = styled.TouchableOpacity`
    width: 90%;
    background-color: white;
    elevation: 5;

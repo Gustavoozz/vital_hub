@@ -28,6 +28,7 @@ import { DateSelect } from './src/screens/DateSelect/DateSelect';
 import SplashScreen from "./src/screens/SplashScreen/SplashScreen";
 import { ViewPrescription } from './src/screens/ViewPrescription/ViewPrescription';
 import { Main } from './src/screens/Main/Main';
+import { MainDoctor } from './src/screens/MainDoctor/MainDoctor';
 
 
 const Stack = createNativeStackNavigator();
@@ -71,6 +72,12 @@ export default function App() {
           name="Main"
           component={Main}      
         />
+
+      <Stack.Screen
+          name="MainDoctor"
+          component={MainDoctor}      
+        />
+
 
         <Stack.Screen
           name="SplashScreen"
