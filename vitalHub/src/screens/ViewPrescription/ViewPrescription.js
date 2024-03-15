@@ -11,15 +11,13 @@ import { SendPhotoButton } from '../../components/Button/Style'
 import { CancelText } from '../../components/Link/Style'
 
 import CameraProntuary from "../../components/CameraProntuary/CameraProntuary"
-import { Camera, CameraType } from 'expo-camera';
-import { useState, useEffect, useRef } from 'react'
-
+import { useState } from 'react'
 import { FontAwesome } from '@expo/vector-icons'
 // import * as MediaLibrary xfrom 'expo-media-library'
 
 export const ViewPrescription = ({ navigation }) => {
-
-  const [mostrarCamera, setmostrarCamera] = useState(false);
+  const [ uriCameraCapture, setUriCameraCapture] = useState(false);
+  const [showCameraModal, setShowCameraModal] = useState(null);
   
   const showCamera = () => {
       setmostrarCamera(mostrarCamera ? false : true)
@@ -27,7 +25,7 @@ export const ViewPrescription = ({ navigation }) => {
 
     return(
         <>
-        {mostrarCamera ? <CameraProntuary /> : (
+        {showCameraModal ? <CameraProntuary /> : (
         <ContainerUser contentContainerStyle={{flexGrow: 1, alignItems: 'center'}}>
         <PhotoContainer>
         <UserContainer source={require('../../assets/UserDoctorBig.png')}/>
@@ -63,7 +61,7 @@ export const ViewPrescription = ({ navigation }) => {
         <PhotoButton style={{ height: 111, fontFamily: 'MontserratAlternates_500Medium', paddingBottom: 0}}
         placeholder="                  Nenhuma foto informada"
         placeholderTextColor="#4E4B59"
-        onPress={showCamera}
+        onPress={() => setShowCameraModal()}
         ><ButtonTitle style={{ fontFamily: 'MontserratAlternates_500Medium', fontSize: 14, color: '#4E4B59', textTransform: 'none', marginTop: 43, marginLeft: 80}}>Nenhuma foto informada</ButtonTitle></PhotoButton>
         </View>
 
@@ -82,8 +80,14 @@ export const ViewPrescription = ({ navigation }) => {
         /> 
 
         <CancelText onPress={() => navigation.replace("Main")}>Voltar</CancelText>
+
+        <CameraProntuary
+        visible={showCameraModal}
+        setUriCameraCapture={setUriCameraCapture}
+        setShowCameraModal={setShowCameraModal}
+        />
         </ContainerUser>
-        )}
+         )}
         </>
     )
 }

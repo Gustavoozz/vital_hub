@@ -2,14 +2,15 @@ import { StatusBar } from 'expo-status-bar';
 import { Image, Modal, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Camera, CameraType } from 'expo-camera';
 import { useEffect, useState, useRef } from 'react';
-import { FontAwesome } from '@expo/vector-icons'
+import { FontAwesome, MaterialIcons } from '@expo/vector-icons'
 import * as MediaLibrary from 'expo-media-library'
 
-export default function App() {
+export default function CameraProntuary({ visible, setUriCameraCapture, setShowCameraModal, ...rest}) {
   const cameraRef = useRef(null);
   const [ photo, setPhoto ] = useState(null);
   const [ openModal, setOpenModal ] = useState(false);
   const [ tipoCamera, setTipoCamera ] = useState(CameraType.front);
+  const [ capturePhoto, setCapturePhoto ] = useState(null);
 
   useEffect(() => {
     ( async () => {
@@ -18,6 +19,14 @@ export default function App() {
       const { status : mediaStatus } = await MediaLibrary.requestPermissionsAsync();
     })();
   }, [])
+
+
+  async function SendFormPhoto() {
+
+    await setUriCameraCapture(capturePhoto);
+
+    handleClose();
+  }
 
   async function CapturePhoto() {
     if( cameraRef ) {
@@ -30,23 +39,22 @@ export default function App() {
     }
   }
 
+
   function ClearPhoto() {
     setPhoto(null);
 
     setOpenModal(false);
   }
 
-  async function UploadPhoto() {
-    await MediaLibrary.createAssetAsync(photo)
-    .then(() => {
-      alert("Foto salva com sucesso!")
-    }).catch( error => {
-      alert("Não foi possível processar a foto!")
-    })
+function handleClose() {
+  setShowCameraModal(false);
+
+    navigation.replace("ViewPrescription")
   }
 
   return (
-    <View style={styles.container}>
+    
+    <Modal {...rest} visible={visible} transparent={true} animationType="slide">
       <Camera 
       ref={cameraRef}
       style={ styles.camera }
@@ -55,7 +63,7 @@ export default function App() {
       >
       <View style={ styles.viewFlip }>
       <TouchableOpacity style={ styles.btnFlip} onPress={() => setTipoCamera( tipoCamera == CameraType.front ? CameraType.back : CameraType.front)}>
-      <Text style={ styles.txtFlip }>Switch</Text>   
+      <MaterialIcons name="cameraswitch" size={35} color="white" />
       </TouchableOpacity>
       </View>
       </Camera>
@@ -73,7 +81,7 @@ export default function App() {
       <FontAwesome name='trash' size={35} color='#121212'/>
       </TouchableOpacity>
 
-      <TouchableOpacity style={ styles.btnUpload } onPress={() => UploadPhoto()}>
+      <TouchableOpacity style={ styles.btnUpload } onPress={() => SendFormPhoto()}>
       <FontAwesome name='upload' size={35} color='#121212`'/>
       </TouchableOpacity>
 
@@ -86,14 +94,14 @@ export default function App() {
       />
       </View>
       </Modal>
-    </View>
+    </Modal>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -148,3 +156,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
+
