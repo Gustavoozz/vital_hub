@@ -24,7 +24,7 @@ export const CancelationModal = ({
         const { status } = await Notifications.getPermissionsAsync()
 
         if (status !== "granted") {
-            alert("As notificações do usuário não estão ativas! ")
+            alert("As notificações do usuário não estão ativas!")
             return;
         }
 
